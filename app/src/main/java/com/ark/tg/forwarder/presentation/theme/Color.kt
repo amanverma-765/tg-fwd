@@ -1,4 +1,4 @@
-package com.ark.tg.forwarder.ui.theme
+package com.ark.tg.forwarder.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
