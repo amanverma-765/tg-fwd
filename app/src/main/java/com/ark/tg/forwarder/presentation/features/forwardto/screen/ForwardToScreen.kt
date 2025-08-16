@@ -18,7 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
-import com.ark.tg.forwarder.presentation.components.ChatBottomBar
+import com.ark.tg.forwarder.presentation.components.BottomBarWithButton
 import com.ark.tg.forwarder.presentation.components.ChatCard
 import com.ark.tg.forwarder.presentation.components.ChatTopAppBar
 
@@ -44,7 +44,7 @@ fun ForwardToScreen(
         },
         bottomBar = {
             if (isSelected) {
-                ChatBottomBar(
+                BottomBarWithButton(
                     title = "Submit",
                     onBtnClicked = onSubmitClicked
                 )

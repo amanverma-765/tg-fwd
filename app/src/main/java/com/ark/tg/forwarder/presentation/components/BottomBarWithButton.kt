@@ -13,14 +13,16 @@ import androidx.compose.ui.unit.dp
 
 
 @Composable
-fun ChatBottomBar(
+fun BottomBarWithButton(
     modifier: Modifier = Modifier,
     title: String,
+    enabled: Boolean = true,
     onBtnClicked: () -> Unit,
 ) {
     BottomAppBar(modifier = modifier) {
         Button(
             onClick = onBtnClicked,
+            enabled = enabled,
             contentPadding = PaddingValues(vertical = 12.dp),
             modifier = Modifier
                 .fillMaxWidth()
@@ -28,7 +30,7 @@ fun ChatBottomBar(
         ) {
             Text(
                 text = title,
-                style = MaterialTheme.typography.titleLarge
+                style = MaterialTheme.typography.titleMedium
             )
         }
     }

@@ -7,6 +7,15 @@ import kotlinx.serialization.Serializable
 sealed interface Destinations {
 
     @Serializable
+    data object Phone: Destinations
+
+    @Serializable
+    data object Otp: Destinations
+
+    @Serializable
+    data object Password: Destinations
+
+    @Serializable
     data object Home : Destinations
 
     @Serializable

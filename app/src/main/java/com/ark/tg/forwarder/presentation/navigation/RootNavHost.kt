@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.ark.tg.forwarder.presentation.features.auth.screen.PhoneScreen
 import com.ark.tg.forwarder.presentation.features.forwardfrom.screen.ForwardFromScreen
 import com.ark.tg.forwarder.presentation.features.forwardto.screen.ForwardToScreen
 import com.ark.tg.forwarder.presentation.features.home.screen.HomeScreen
@@ -31,6 +32,11 @@ fun RootNavHost(
         popExitTransition = { slideOutHorizontally(tween(300)) { it } },
         modifier = modifier.fillMaxSize()
     ) {
+
+        composable<Destinations.Phone> {
+            PhoneScreen()
+        }
+
         composable<Destinations.Home> {
             HomeScreen(
                 onFabClicked = {
